@@ -7,7 +7,7 @@ Algoritmo Calculadora
 	Leer operador2;
 	Escribir "Elegir la operacion que desea realizar 1 para suma, 2 para resta, 3 para multiplicacion, 4 para division ";
 	Leer operando;
-	si operando > 4 Entonces;
+	Si operando > 4 Entonces;
 		Escribir "Opcion errada"
 	SiNo
 		Si operando=1;
@@ -20,7 +20,11 @@ Algoritmo Calculadora
 			operacion=operador1*operador2;
 		FinSi
 		Si operando=4;
-			operacion=operador/operador2;
+			Si operador2==0
+				Escribir "No es permitida la división por cero (0)";
+			SiNo
+				operacion=operador/operador2;
+			FinSi
 		FinSi
 	FinSi
 	Escribir "El resultado es " operacion;
